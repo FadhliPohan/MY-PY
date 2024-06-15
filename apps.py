@@ -2,7 +2,8 @@
 from flask import Flask, render_template, request, jsonify
 from keras.models import load_model
 
-from keras_preprocessing.image import load_img
+# from keras_preprocessing.image import load_img
+from keras.utils import load_img, img_to_array
 from keras_preprocessing.image import img_to_array
 from keras_applications.mobilenet_v2 import preprocess_input
 from keras_applications.mobilenet_v2 import decode_predictions
@@ -75,8 +76,8 @@ def predict():
     img.close()
 
     # prepare image for prediction
-    img = image.load_img(predict_image_path, target_size=(128, 128, 3))
-    x = image.img_to_array(img)
+    img = load_img(predict_image_path, target_size=(128, 128, 3))
+    x = img_to_array(img)
     x = x/127.5-1 
     x = np.expand_dims(x, axis=0)
     images = np.vstack([x])
@@ -95,17 +96,17 @@ def predict():
     #     "confidence": '{:2.0f}%'.format(100 * np.max(prediction_array))
     # }
 	
-    return render_template("classifications.html", img_path = predict_image_path, 
-                        predictionnasnet = class_names[np.argmax(prediction_array_nasnet)],
-                        confidencenasnet = '{:2.0f}%'.format(100 * np.max(prediction_array_nasnet)),
-                        predictionvgg = class_names[np.argmax(prediction_array_vgg)],
-                        confidencvgg = '{:2.0f}%'.format(100 * np.max(prediction_array_vgg)),
-                        predictionxception = class_names[np.argmax(prediction_array_xception)],
-                        confidenceexception = '{:2.0f}%'.format(100 * np.max(prediction_array_xception)),
-                        predictioncnn = class_names[np.argmax(prediction_array_cnn)],
-                        confidencecnn = '{:2.0f}%'.format(100 * np.max(prediction_array_cnn))  
-                        )
+    return render_template("classifications.html", img_path = predict_image_path,
+                           predictionnasnet=class_names[np.argmax(prediction_array_nasnet)],
+                           confidencenasnet='{:2.0f}%'.format(100 * np.max(prediction_array_nasnet)),
+                           predictionvgg=class_names[np.argmax(prediction_array_vgg)],
+                           confidencvgg='{:2.0f}%'.format(100 * np.max(prediction_array_vgg)),
+                           predictionxception=class_names[np.argmax(prediction_array_xception)],
+                           confidenceexception='{:2.0f}%'.format(100 * np.max(prediction_array_xception)),
+                           predictioncnn=class_names[np.argmax(prediction_array_cnn)],
+                           confidencecnn='{:2.0f}%'.format(100 * np.max(prediction_array_cnn))
+                           )
 
 if __name__ =='__main__':
 	#app.debug = True
-	app.run(debug = True)
+    app.run(debug = True)

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb590def-a8ff-476e-8a05-f40b7b07ae61" name="Default Changelist" comment="" />
+    <list default="true" id="cb590def-a8ff-476e-8a05-f40b7b07ae61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Percobaan C - CNN from Scratch.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Percobaan C - CNN from Scratch.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Percobaan D - CNN add Model VGG16.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Percobaan D - CNN add Model VGG16.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Percobaan E - CNN add Models Xception.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Percobaan E - CNN add Models Xception.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Percobaan F - CNN add Models NASNetMobile.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Percobaan F - CNN add Models NASNetMobile.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,21 +25,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Deteksi Ejaan berdasarkan Sinyal P300 dengan Algoritma Convolutional Neural Network (CNN)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps.py" />
   </component>
   <component name="RunManager">
     <configuration name="apps" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MY-PY" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\ASUS-ROG\anaconda3\envs\pythonProject\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
